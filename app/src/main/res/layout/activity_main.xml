@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#E85C5C5C"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:textColor="@color/black"
+        android:background="#64DD17"
+        android:hint="@string/enter_note_here"
+        android:textColorHint="#000000"
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="italic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:textStyle="italic|bold"
+        android:textColor="@color/black"
+        android:backgroundTint="#C51162"
+        android:onClick="submitData"
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="#E85C5C5C"
+        android:padding="12dp"
+        tools:itemCount="5"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton"
+        tools:listitem="@layout/item_note" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
